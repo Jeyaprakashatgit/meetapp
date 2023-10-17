@@ -1,38 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;500;700&family=Quicksand:wght@400;500;600&family=Roboto:wght@300&family=Space+Mono&display=swap');
+body{
+  font-family: 'Quicksand', sans-serif;
+}
 .App {
   text-align: center;
+  width: 900px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 10px auto;
+}
+.navbar a{
+  font-weight: 800;
+  text-decoration: none;
+  color: black;
+}
+.navbar a:active{
+  font-weight: 900;
+  font-size: 17px;
+}
+.navbar a:focus{
+  font-weight: 900;
+  font-size: 17px;
+}
+.meetdiv{
+  display: flex;
+  gap: 20px;
+}
+.mhead{
+  color: black;
+  font-size: 30px;
+  
+  font-weight: 900;
+}
+.pages{
+  margin: 60px auto;
+}
+.addbtn{
+  padding: 10px 20px;
+  border: none;
+  background-color: black;
   color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 30px;
 }
-
-.App-link {
-  color: #61dafb;
+.meetimg{
+  width: 300px;
+  border-radius: 20px;
 }
+.pages input{
+  width: 500px;
+  border: 1px solid black;
+  display: inline-block;
+  /* height: 50px; */
+  margin-top: 20px;
+  border-radius:15px ;
+  padding: 15px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+}
+.pages input:focus{
+  outline: none;
+  border: none;
+  box-shadow: 0 0 5px rgba(1, 1, 1, 1.6);
+}
+.loader {
+  border: 2px solid #3b3b3b; /* Light grey */
+  border-top: 2px solid #dadada; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+.meeting-card{
+  width: 300px;
+  /* border: 1px solid grey; */
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #fdf8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.meeting-card:hover{
+  background-color: #ccc; 
+  transform: scale(1.05);
+}
+.meeting-card img{
+  width: 100%;
+  border-radius: 10px;
+}
+.comp{
+  display: flex;
+  gap:20px;
+}
+.title1{
+  color: tomato; 
+  background-image: linear-gradient(90deg, #7928ca, #ff0080);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

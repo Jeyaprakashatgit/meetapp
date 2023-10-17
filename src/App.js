@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+import { Route,Routes } from 'react-router-dom';
 import './App.css';
+import Nav from './Components/Nav';
+import Upcomingmeeting from './Pages/Upcomingmeeting';
+import Addmeeting from './Pages/Addmeeting';
+import Pastmeeting from './Pages/Pastmeeting';
+import Index from './Pages/Index';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+   
+      <Routes>
+      <Route path='/' element={<Index/>} />
+      <Route path='/add-meetings' element={<Addmeeting/>} />
+      <Route path='/past-meetings' element={<Pastmeeting/>} />
+      <Route path='/upcoming-meetings' element={<Upcomingmeeting/>} />
+    </Routes>
     </div>
+
+   
   );
 }
 
